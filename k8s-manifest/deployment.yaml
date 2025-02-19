@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-scrape-app-deployment
+  labels:
+    app: web-scrape-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-scrape-app
+  template:
+    metadata:
+      labels:
+        app: web-scrape-app
+    spec:
+      containers:
+      - name: web-scrape-app-container
+        image: dumalbhaskar/web-scrape-image:v1.0
+        ports:
+        - containerPort: 5000
+       
