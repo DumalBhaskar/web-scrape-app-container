@@ -6,8 +6,8 @@ services:
       context: .  
       dockerfile: Dockerfile
       args:
-        SCRAPE_URL: https://exactspace.co
-    image: dumalbhaskar/web-scrape-image:v1.0   
+        SCRAPE_URL: https://kubernetes.io
+    image: web-scrape-image:v1.0   
     ports:
       - 80:5000  
     container_name: web-scrape-app-container

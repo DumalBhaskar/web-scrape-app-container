@@ -24,10 +24,9 @@ ENV SCRAPE_URL=${SCRAPE_URL}
 COPY scrape.js .
 
 # Run scraper
-
 RUN node scrape.js
 
-# Stage 2: Python Flask Server
+# Stage 2: Hosting Python Flask Server
 FROM python:3.10-slim AS server
 
 # Install dependencies
